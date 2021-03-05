@@ -1,0 +1,22 @@
+{
+  "name": "evaluate",
+  "version": "1.0.0",
+  "description": "tool that allows users to run Natural language Processing NLP on articles and blogs found on other websites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoodnessObi/evaluate.git"
+  },
+  "author": "GoodnessObi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GoodnessObi/evaluate/issues"
+  },
+  "homepage": "https://github.com/GoodnessObi/evaluate#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
