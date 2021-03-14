@@ -1,14 +1,59 @@
+$primary-font: 'Roboto', sans-serif;
+$secondary-font: 'Raleway', sans-serif;
+
 body {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     min-height: 100vh;
-}
+    font-family: $primary-font;
+    @media only screen and (max-width: 600px) {
+        flex-direction: column-reverse;
+    }
 
-main {
-    flex: 2;
-}
+    main {
+        width: 55%;
+        @media only screen and (max-width: 600px) {
+            width: 100%;
+        }
+    
+        .container {
+            width: 70%;
+            margin: auto;
+            min-height: 90vh;
+            padding: 25px 0 0 0;
 
-section {
-    max-width: 800px;
-    margin: 50px auto;
+            @media only screen and (max-width: 600px) {
+                min-height: 55vh;
+                width: 85%;
+            }
+
+            section {
+                margin: 100px auto 30px auto;
+
+                p {
+                    font-family: $secondary-font;
+                    font-size: 32px;
+                    color: #17334C;
+                    font-weight: 800;
+                    line-height: 1.15;
+                    letter-spacing: 1.15px;
+
+                    @media only screen and (max-width: 600px) {
+                        font-size: 24px;
+                    }
+                }
+            }
+        } 
+    }
+ 
+    aside {
+        width: 45%;
+        background: url(../images/aside.png);
+        background-size: cover;
+        @media only screen and (max-width: 600px) {
+            width: 100%;
+            min-height: 40vh;
+        }
+    }
+
 }

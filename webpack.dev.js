@@ -7,7 +7,10 @@ module.exports = {
   entry: './src/client/index.js',
   mode: 'development',
   devtool: 'source-map',
-  output: {},
+  output: {
+    libraryTarget:'var',
+    library:'Client'
+  },
   module: {
     rules: [
       {
@@ -18,7 +21,15 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [ 'style-loader', 'css-loader', 'sass-loader' ]
-      }
+      },
+      {
+        test: /\.(svg|png)$/,
+        use: [
+          {
+            loader: 'url-loader'
+          }
+        ]
+      },
     ]
   },
   plugins: [

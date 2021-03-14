@@ -2,37 +2,46 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Test</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&family=Roboto&display=swap" rel="stylesheet">
+        <title>Evaluate</title>
     </head>
 
     <body>
-
-        <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
-
         <main>
-            <section>
-                <form class="" onsubmit="return handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
-                </form>
-            </section>
+            <div class="container">
+                <header>
+                    <div class="">
+                        <img alt="Evaluate Logo" id="logo">
+                    </div>
+                </header>
+    
+                <section>
+                    <div>
+                        <p>
+                            Evaluate a News article using Natural Language Processing
+                        </p>
+                    </div>
+                    <form class="" onsubmit="return Client.handleSubmit(event)">
+                        <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Enter a URL">
+                        <!-- <small class="error">Insert a valid URL</small> -->
 
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
-            </section>
+                        <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                    </form>
+                </section>
+    
+                <section>
+                    <strong>Form Results:</strong>
+                    <div id="results"></div>
+                </section>
+            </div>
+
+            <footer>
+                <p>	&#169; Goodness Obi for Udacity, 2021.</p>
+            </footer>
         </main>
 
-        <footer>
-            <p>This is a footer</p>
-        </footer>
+        <aside></aside>
 
     </body>
 </html>

@@ -7,5 +7,14 @@ import './styles/footer.scss';
 import './styles/form.scss';
 import './styles/header.scss';
 
+import './images/aside.png';
+import logo from './images/Logo.svg';
+
+document.getElementById('logo').src = logo;
+
 console.log(checkForName);
-alert('You did it!!!')
+
+export {
+  checkForName,
+  handleSubmit
+}
