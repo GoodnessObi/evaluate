@@ -6,33 +6,40 @@
     </head>
 
     <body>
-
-        <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
-
         <main>
-            <section>
-                <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
-                </form>
-            </section>
+            <div class="container">
+                <header>
+                    <div class="">
+                        <img src="./images/Logo.png" alt="Evaluate Logo">
+                    </div>
+                </header>
+    
+                <section>
+                    <div>
+                        <p>
+                            Evaluate a News article using Natural Language Processing
+                        </p>
+                    </div>
+                    <form class="" onsubmit="return Client.handleSubmit(event)">
+                        <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Enter a URL">
+                        <small>URL shoule be unauthenticated - http://...</small>
 
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
-            </section>
+                        <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                    </form>
+                </section>
+    
+                <section>
+                    <strong>Form Results:</strong>
+                    <div id="results"></div>
+                </section>
+            </div>
+
+            <footer>
+                <p>	&#169; Goodness Obi for Udacity, 2021.</p>
+            </footer>
         </main>
 
-        <footer>
-            <p>This is a footer</p>
-        </footer>
+        <aside></aside>
 
     </body>
 </html>

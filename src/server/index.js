@@ -40,12 +40,13 @@ app.get('/test', function (req, res) {
 })
 
 app.post('/addData', async (req, res) => {
+    console.log('body', req.body)
     try{
-        const response = await fetch (`${baseURL}?key=${apiKey}&lang=auto&${req.body.isUrl ? 'url' : 'txt'}=${req.body.formText}`, {
+        const response = await fetch (`${baseURL}?key=${apiKey}&lang=auto&url=${req.body.formText}`, {
             method: 'POST'
         })
         const data = await response.json();
-        console.log(data);
+        console.log(data, req.body.formText);
         console.log(data.agreement, data.subjectivity, data.irony)
         res.send(data)
     }catch(error) {

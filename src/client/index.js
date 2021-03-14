@@ -7,6 +7,9 @@ import './styles/footer.scss';
 import './styles/form.scss';
 import './styles/header.scss';
 
+import './images/aside.png';
+import './images/Logo.png';
+
 console.log(checkForName);
 
 export {

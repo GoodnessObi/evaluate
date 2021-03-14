@@ -5,10 +5,11 @@ function handleSubmit(event) {
     let formText = document.getElementById('name').value
     // Client.checkForName(formText)
 
-    console.log("::: Form Submitted :::")
+    console.log("::: Form Submitted :::", formText)
     fetch('http://localhost:8081/addData', {
         method: 'POST',
-        body: { formText, isUrl }
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ formText }),
     })
     .then(res => res.json())
     .then(function(res) {
