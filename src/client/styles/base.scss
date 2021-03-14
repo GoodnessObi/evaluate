@@ -1,7 +1,11 @@
+$primary-font: 'Roboto', sans-serif;
+$secondary-font: 'Raleway', sans-serif;
+
 body {
     display: flex;
     flex-direction: row;
     min-height: 100vh;
+    font-family: $primary-font;
     @media only screen and (max-width: 600px) {
         flex-direction: column-reverse;
     }
@@ -24,7 +28,20 @@ body {
             }
 
             section {
-                margin: 30px auto;
+                margin: 100px auto 30px auto;
+
+                p {
+                    font-family: $secondary-font;
+                    font-size: 32px;
+                    color: #17334C;
+                    font-weight: 800;
+                    line-height: 1.15;
+                    letter-spacing: 1.15px;
+
+                    @media only screen and (max-width: 600px) {
+                        font-size: 24px;
+                    }
+                }
             }
         } 
     }
