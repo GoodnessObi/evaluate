@@ -14,11 +14,16 @@ function handleSubmit(event) {
     .then(res => res.json())
     .then(function(res) {
         console.log(res)
-        let message = `${res.irony}, ${res.subjectivity}, ${res.agreement}, ${res.confidence}`
-        document.getElementById('results').innerHTML = message
+        
+        document.querySelector('.results').classList.add("fadeIn");
+        document.getElementById('confidence').innerHTML = res.confidence.toLowerCase();
+        document.getElementById('agreement').innerHTML = res.agreement.toLowerCase();
+        document.getElementById('irony').innerHTML = res.irony.toLowerCase();
+        document.getElementById('subjective').innerHTML = res.subjectivity.toLowerCase();
     })
     .catch(error => {
         console.log(error)
+        document.querySelector('.error').style.diaplay = 'inline-block';
     })
 }
 

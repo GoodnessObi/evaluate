@@ -6,31 +6,37 @@ body {
     flex-direction: row;
     min-height: 100vh;
     font-family: $primary-font;
-    @media only screen and (max-width: 600px) {
+    @media (max-width: 600px) {
         flex-direction: column-reverse;
     }
 
     main {
         width: 55%;
-        @media only screen and (max-width: 600px) {
+
+        @media (max-width: 600px) {
             width: 100%;
+            min-height: 55vh;
         }
     
         .container {
             width: 70%;
             margin: auto;
-            min-height: 90vh;
-            padding: 25px 0 0 0;
+            min-height: 100vh;
+            padding: 25px 0;
+            position: relative;
 
-            @media only screen and (max-width: 600px) {
-                min-height: 55vh;
+            @media (max-width: 600px) {
                 width: 85%;
             }
 
             section {
                 margin: 100px auto 30px auto;
 
-                p {
+                @media (max-width: 600px) {
+                    margin: 30px auto;
+                }
+
+                h1 {
                     font-family: $secondary-font;
                     font-size: 32px;
                     color: #17334C;
@@ -38,7 +44,7 @@ body {
                     line-height: 1.15;
                     letter-spacing: 1.15px;
 
-                    @media only screen and (max-width: 600px) {
+                    @media (max-width: 600px) {
                         font-size: 24px;
                     }
                 }
@@ -48,9 +54,9 @@ body {
  
     aside {
         width: 45%;
-        background: url(../images/aside.svg);
+        background: url(../images/aside.png);
         background-size: cover;
-        @media only screen and (max-width: 600px) {
+        @media (max-width: 600px) {
             width: 100%;
             min-height: 40vh;
         }
