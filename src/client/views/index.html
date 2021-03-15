@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&family=Roboto&display=swap" rel="stylesheet">
         <title>Evaluate</title>
@@ -18,29 +18,31 @@
     
                 <section>
                     <div>
-                        <p>
+                        <h1>
                             Evaluate a News article using Natural Language Processing
-                        </p>
+                        </h1>
                     </div>
                     <form class="" onsubmit="return Client.handleSubmit(event)">
                         <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Enter a URL">
-                        <!-- <small class="error">Insert a valid URL</small> -->
+                        <small class="error">* Insert a valid URL</small>
 
                         <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                     </form>
                 </section>
     
-                <section>
-                    <strong>Form Results:</strong>
-                    <div id="results"></div>
+                <section class="results">
+                    <h2>Analysis Result</h2>
+                    <div id="results">
+                        <p>The confidence level is <span id="confidence"></span>% and there is a tone of <span id="agreement"></span> in this article. The article is <span id="irony"></span> and <span id="subjective"></span></p>
+                    </div>
                 </section>
+
+                
+                <footer>
+                    <p>	&#169; Goodness Obi for Udacity, 2021.</p>
+                </footer>
             </div>
-
-            <footer>
-                <p>	&#169; Goodness Obi for Udacity, 2021.</p>
-            </footer>
         </main>
-
         <aside></aside>
 
     </body>
