@@ -1,5 +1,3 @@
-$secondary-font: 'Raleway', sans-serif;
-
 form {
     padding: 20px 0;
     position: relative;
@@ -45,33 +43,4 @@ small {
     position: absolute;
     top: 15px;
     display: none;
-}
-
-section {
-    &.results {
-        visibility: hidden;
-        opacity: 0;
- 
-        &.fadeIn {
-        visibility: visible;
-        opacity: 1;
-        transition: visibility 0s linear 0s, opacity 400ms;
-        }
-
-        h2 {
-            font-family: $secondary-font;
-            font-weight: 800;
-            padding-bottom: 10px;
-            font-size: 20px;
-            color: #17334C;
-        }
-
-        span {
-            color: #773333;
-        }
-
-        p {
-            padding: 5px 0;
-        }
-    }
 }
