@@ -23,7 +23,7 @@
                         </h1>
                     </div>
                     <form class="" onsubmit="return Client.handleSubmit(event)">
-                        <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Enter a URL">
+                        <input id="name" type="text" name="input" value="" placeholder="Enter a URL">
                         <small class="error">* Insert a valid URL</small>
 
                         <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
@@ -33,8 +33,16 @@
                 <section class="results">
                     <h2>Analysis Result</h2>
                     <div id="results">
+                        <p>URL analysed : <span id="url"></span></p>
                         <p>The confidence level is <span id="confidence"></span>% and there is a tone of <span id="agreement"></span> in this article. The article is <span id="irony"></span> and <span id="subjective"></span></p>
                     </div>
+                </section>
+
+                <section id="error" class="handle-error">
+                    <p><span>uh-oh!</span><br>
+                    Something blew up!! <br>
+                    Confrim that the URL is correct and if it is, try again or try some other URL.</p>
+                    <div></div>
                 </section>
 
                 

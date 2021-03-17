@@ -1,9 +1,14 @@
 function handleSubmit(event) {
     event.preventDefault()
+    Client.clearUI();
 
     // check what text was put into the form field
     let formText = document.getElementById('name').value
-    // Client.checkForName(formText)
+
+    if (!Client.checkForName(formText)) {
+        document.querySelector('.error').style.display = 'inline-block';
+        return;
+    }
 
     console.log("::: Form Submitted :::", formText)
     fetch('http://localhost:8081/addData', {
@@ -14,8 +19,14 @@ function handleSubmit(event) {
     .then(res => res.json())
     .then(function(res) {
         console.log(res)
+        if (res.error) {
+            throw new Error(res.error);
+        }
         
+        Client.clearUI();
+        document.getElementById('name').value = '';
         document.querySelector('.results').classList.add("fadeIn");
+        document.getElementById('url').innerHTML = formText;
         document.getElementById('confidence').innerHTML = res.confidence.toLowerCase();
         document.getElementById('agreement').innerHTML = res.agreement.toLowerCase();
         document.getElementById('irony').innerHTML = res.irony.toLowerCase();
@@ -23,7 +34,8 @@ function handleSubmit(event) {
     })
     .catch(error => {
         console.log(error)
-        document.querySelector('.error').style.diaplay = 'inline-block';
+        Client.clearUI();
+        document.querySelector('#error').classList.add("fadeIn");
     })
 }
 

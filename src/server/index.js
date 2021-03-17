@@ -46,10 +46,14 @@ app.post('/addData', async (req, res) => {
             method: 'POST'
         })
         const data = await response.json();
-        console.log(data, req.body.formText);
+        if (data.status.msg !== 'OK') {
+            throw new Error(data.status.msg)
+        }
+        console.log(data, 'data');
         console.log(data.agreement, data.subjectivity, data.irony)
         res.send(data)
     }catch(error) {
-        console.log(error, 'error')
+        console.log(error, 'error', error.message)
+        res.status(500).send({ error: error.message});
     }
 })
