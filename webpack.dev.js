@@ -29,7 +29,7 @@ module.exports = {
             loader: 'url-loader'
           }
         ]
-      },
+      }
     ]
   },
   plugins: [
@@ -45,6 +45,6 @@ module.exports = {
       // Automatically remove all unused webpack assets on rebuild
       cleanStaleWebpackAssets: true,
       protectWebpackAssets: false
-    })
+    }),
   ]
 }
