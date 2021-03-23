@@ -17,22 +17,31 @@ Get an api key from the [MeaningCloud API](https://www.meaningcloud.com/develope
 //locally
 git clone https://github.com/<Your Github Username>/evaluate.git
 ```
-* Input the api key on the first line in the `website/app.js` file
+* Create a `.env` file in the project root and input your API key
 ```
-const apiKey = '***...';
+API_KEY=***...;
 ```
 * Install the node packages
 ```
 npm install
-npm start
 ```
-* Open your local browser and verify the weather-journal-app is working by accessing
-```
-http://localhost:8000/
-```
+* Inspect the `package.json` to see the available scripts
+  * To run dev - Runs on `http://localhost:8080/` 
+  ```
+  npm run build-dev
+  ```
+  * To run prod - Runs on `http://localhost:8081/`
+  ```
+  npm run build-prod
+  npm start
+  ```
+  * To run test 
+  ```
+  npm run test
+  ````
 
 ## Usage
-Put in values in the input fields and click the generate button. The date, your location, the temperature, what the day actually feels like :) and your feelings are returned.
+Put in a valid **news article or blog post URL** and click on the submit button. The result of the analysis will be returned
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
