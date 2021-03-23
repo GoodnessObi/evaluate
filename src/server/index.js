@@ -31,8 +31,9 @@ app.get('/', function (req, res) {
 console.log(`Your API key is ${process.env.API_KEY}`);
 
 // designates what port the app will listen to for incoming requests
-app.listen(8081, function () {
-    console.log('Example app listening on port 8081!')
+const port = process.env.PORT || 8081;
+app.listen(port, function () {
+    console.log(`Example app listening on port ${port}!`)
 })
 
 app.get('/test', function (req, res) {
