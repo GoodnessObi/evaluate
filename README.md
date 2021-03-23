@@ -35,7 +35,7 @@ npm install
   ```
   * To run prod - Runs on `http://localhost:8081/`
   ```
-  npm run build-prod
+  npm run build
   npm start
   ```
   * To run test 
