@@ -10,8 +10,8 @@ function handleSubmit(event) {
         return;
     }
 
-    console.log("::: Form Submitted :::", formText)
-    fetch('http://localhost:8081/addData', {
+    console.log("::: Form Submitted :::", formText) 
+    fetch(`http://localhost:${process.env.PORT}/addData`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({ formText }),
