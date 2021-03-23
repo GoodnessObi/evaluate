@@ -6,6 +6,9 @@ A web tool that allows users to run Natural Language Processing (NLP) on article
 
 NLP is the ability of an application to understand the human language, written or oral.
 
+## Deployed App
+Click [here](https://news-evaluate.herokuapp.com/) to view the deployed app
+
 ## Installation
 Ensure you have [node](https://nodejs.org/en/) installed on your local device
 
